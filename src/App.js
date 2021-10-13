@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Say from "./Say";
+// import Counter from "./Counter";
+// import MyComponent from "./MyComponent";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+// const App = () => {
+//   return <MyComponent name='React' favoriteNumber={1}>리액트</MyComponent>;
+// };
+
+// const App = () => {
+//   return <Counter />;
+// };
+
+const App = () => {
+  return <Say />;
+};
 
 export default App;
