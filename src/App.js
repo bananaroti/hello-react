@@ -1,5 +1,6 @@
 import React from "react";
-import Say from "./Say";
+import EventPractice from "./EventPractice";
+// import Say from "./Say";
 // import Counter from "./Counter";
 // import MyComponent from "./MyComponent";
 
@@ -11,8 +12,12 @@ import Say from "./Say";
 //   return <Counter />;
 // };
 
+// const App = () => {
+//   return <Say />;
+// };
+
 const App = () => {
-  return <Say />;
+  return <EventPractice />;
 };
 
 export default App;
