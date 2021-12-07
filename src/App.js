@@ -1,8 +1,13 @@
 import React from "react";
-import MyComponent from "./MyComponent";
+import EventPractice from "./EventPractice";
+// import MyComponent from "./MyComponent";
+// import Say from "./Say";
 
 const App = () => {
-  return <MyComponent name={"React"}>리액트</MyComponent>;
-};
+  return (
+  // <MyComponent name={"React"} favoriteNumber={13}>리액트</MyComponent>
+  // <Say></Say>
+  <EventPractice></EventPractice>
+  )};
 
 export default App;

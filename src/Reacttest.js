@@ -1,7 +1,3 @@
-function twice(value) {
-	return value * 2;
-}
-const triple = (value) => value * 3;
-
-
-console.log(twice, triple);
+const array = [1, 2];
+const one = array[0];
+const two = array[1];

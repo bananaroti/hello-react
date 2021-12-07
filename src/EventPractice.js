@@ -1,55 +1,30 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react/cjs/react.development";
 
 const EventPractice = () => {
+  const [message, setMessage] = useState('');
 
-	const [form, setForm] = useState({
-		username: '',
-		message: ''
-	});
+  function handleChange(e) {
+    setMessage(e.target.value);
+  }
 
-	const {username, message} = form;
-
-	const onChange = e => {
-		const nextForm = {
-			...form,
-			[e.target.name] : e.target.value
-		};
-		setForm(nextForm);
-	}
-
-  const onClick = () => {
-    alert(username + ": " + message);
-    setForm({
-			username : '',
-			message : ''
-		});
-  };
-
-  const onKeyPress = (e) => {
-    if (e.key === "Enter") {
-      onClick();
-    }
-  };
-
+  function handleClick() {
+    alert(message);
+    setMessage('');
+  }
   return (
     <div>
-      <h1>이벤트연습</h1>
+      <h1>이벤트 연습</h1>
       <input
         type="text"
-        name="username"
-        placeholder="사용자명"
-        value={username}
-        onChange={onChange}
+        name="message"
+        placeholder="아무거나 입력해 보세요"
+        value={message}
+        onChange={(e) => {
+          handleChange(e);
+        }}
       ></input>
-      <input
-			type="text"
-			name="message"
-			placeholder="아무거나입력하세요"
-			value={message}
-			onChange={onChange}
-			onKeyPress={onKeyPress}
-			></input>
-      <button onClick={onClick}>확인</button>
+      <button onClick={handleClick}>확인</button>
     </div>
   );
 };
