@@ -9,8 +9,8 @@ const EventPractice = () => {
   const { username, message } = form;
   const onChange = e => {
     const nextform = {
-      ...form,
-      [e.target.name]: e.target.value
+      ...form, // 기존의 form 내용을 이곳에 복사
+      [e.target.name]: e.target.value // 원하는값을 덮어씌움
     }
     setForm(nextform);
   }
