@@ -5,6 +5,7 @@ const EventPractice = () => {
   const [username,setUsername] = useState('');
   const [message, setMessage] = useState('');
 
+  // e = SyntheticEvent , onChange이벤트 발생기시 e.target.value를 기록
   const onChangeUsername = e => setUsername(e.target.value);
   const onChangeMessage = e => setMessage(e.target.value);
   const onClick = () => {
