@@ -3,31 +3,30 @@ import { useState } from "react/cjs/react.development";
 
 const EventPractice = () => {
   const [form, setForm] = useState({
-    username: '',
-    message: '',
+    username: "",
+    message: "",
   });
   const { username, message } = form;
-  const onChange = e => {
+  const onChange = (e) => {
     const nextform = {
       ...form, // 기존의 form 내용을 이곳에 복사
-      [e.target.name]: e.target.value // 원하는값을 덮어씌움
-    }
+      [e.target.name]: e.target.value, // 원하는값을 덮어씌움
+    };
     setForm(nextform);
-  }
-
+  };
 
   const onClick = () => {
-    alert(username+': '+message);
+    alert(username + ": " + message);
     setForm({
-      username: '',
-      message: '',
-    })
-  }
-  const onKeyPress = e => {
-    if(e.key === 'Enter'){
+      username: "",
+      message: "",
+    });
+  };
+  const onKeyPress = (e) => {
+    if (e.key === "Enter") {
       onClick();
     }
-  }
+  };
 
   return (
     <div>

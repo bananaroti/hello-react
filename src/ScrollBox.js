@@ -1,9 +1,8 @@
 import React, { useRef } from "react";
 
 const ScrollBox = () => {
-  const refBox = useRef(null);
+  const refBox = React.createRef();
   const scrollToBottom = () => {
-    refBox.current.focus();
     const { scrollHeight, clientHeight } = refBox;
     refBox.scrollTop = scrollHeight - clientHeight;
   };
