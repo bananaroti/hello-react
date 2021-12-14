@@ -1,5 +1,7 @@
+// import ScrollBox from "./ScrollBox";
+import IterationSample from "./IterationSample";
 import React, { Component } from "react";
-import ScrollBox from "./ScrollBox";
+
 // import EventPractice from "./EventPractice";
 // import MyComponent from "./MyComponent";
 // import Say from "./Say";
@@ -13,9 +15,8 @@ class App extends Component {
         {/* <Say></Say> */}
         {/* <EventPractice></EventPractice> */}
         {/* <ValidationSample></ValidationSample> */}
-        <ScrollBox ref={ref=>{this.scrollBox=ref}}></ScrollBox>
-        <button onClick={()=>{this.scrollBox.scrollToTop()}}>맨 위로</button>
-        <button onClick={()=>{this.scrollBox.scrollToBottom()}}>맨 밑으로</button>
+        {/* <ScrollBoxref={(ref) => {this.scrollBox = ref;}}        ></ScrollBoxref=> */}
+        <IterationSample></IterationSample>
       </div>
     );
   }

@@ -1,3 +1,3 @@
-const array = [1, 2];
-const one = array[0];
-const two = array[1];
+const numbers = [1, 2, 3, 4, 5, 6];
+const withoutThree = numbers.filter((num) => num !== 3);
+console.log(withoutThree);
