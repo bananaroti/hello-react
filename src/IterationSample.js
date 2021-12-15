@@ -11,7 +11,11 @@ const IterationSample = () => {
   const [nextId, setNextId] = useState(5);
 
   const onChange = (e) => setInputText(e.target.value);
-	const onKeyEnter = () => onClick();
+  const onKeyPress = (e) => {
+    if (e.key === "Enter") {
+      onClick();
+    }
+  };
   const onClick = () => {
     const nextNames = names.concat({
       id: nextId,
@@ -21,11 +25,23 @@ const IterationSample = () => {
     setNames(nextNames);
     setInputText("");
   };
+  const onRemove = (id) => {
+    const nextNames = names.filter((neme) => neme.id !== id);
+    setNames(nextNames);
+  };
 
-  const namesList = names.map((name) => <li key={name.id}>{name.text}</li>);
+  const namesList = names.map((name) => (
+    <li key={name.id} onDoubleClick={() => onRemove(name.id)}>
+      {name.text}
+    </li>
+  ));
   return (
     <div>
-      <input value={inputText} onChange={onChange} onKeyPress={onKeyEnter}></input>
+      <input
+        value={inputText}
+        onChange={onChange}
+        onKeyPress={onKeyPress}
+      ></input>
       <button onClick={onClick}>추가하기</button>
       <ul>{namesList}</ul>
     </div>
