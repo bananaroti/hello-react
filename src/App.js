@@ -1,5 +1,6 @@
 // import ScrollBox from "./ScrollBox";
-import IterationSample from "./IterationSample";
+// import IterationSample from "./IterationSample";
+import LifrCycleSample from "./LifrCycleSample";
 import React, { Component } from "react";
 
 // import EventPractice from "./EventPractice";
@@ -16,7 +17,8 @@ class App extends Component {
         {/* <EventPractice></EventPractice> */}
         {/* <ValidationSample></ValidationSample> */}
         {/* <ScrollBoxref={(ref) => {this.scrollBox = ref;}}        ></ScrollBoxref=> */}
-        <IterationSample></IterationSample>
+        {/* <IterationSample></IterationSample> */}
+        <LifrCycleSample></LifrCycleSample>
       </div>
     );
   }
