@@ -1,21 +1,20 @@
 import React, { Component } from "react";
 
 class ScrollBox extends Component {
-
   scrollToTop = () => {
-    const {scrollHeight, clientHeight} = this.box;
+    const { scrollHeight, clientHeight } = this.box;
     /*  비구조화 할당 문법
         아래 코드와 같은 의미
         const scrollHeight = this.box.scrollHeight;
         const clientHeight = this.box.clientHeight;
     */
     this.box.scrollTop = clientHeight - scrollHeight;
-  }
+  };
 
   scrollToBottom = () => {
-    const {scrollHeight, clientHeight} = this.box;
+    const { scrollHeight, clientHeight } = this.box;
     this.box.scrollTop = scrollHeight - clientHeight;
-  }
+  };
 
   render() {
     const style = {
@@ -32,7 +31,12 @@ class ScrollBox extends Component {
     };
 
     return (
-      <div style={style} ref={ref=> {this.box=ref}}>
+      <div
+        style={style}
+        ref={(ref) => {
+          this.box = ref;
+        }}
+      >
         <div style={innerStyle}></div>
       </div>
     );
